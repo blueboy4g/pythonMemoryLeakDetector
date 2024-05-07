@@ -55,7 +55,7 @@ class Memory_Detector_App:
 
         self.run_additional_logs = IntVar()
         self.memory_leak_delay = Scale(root, from_=5, to=10000, orient=HORIZONTAL)
-        self.trigger_threshold = Scale(root, from_=25, to=500, orient=HORIZONTAL)
+        self.trigger_threshold = Scale(root, from_=5, to=500, orient=HORIZONTAL)
         self.memory_threshold = Scale(root, from_=1, to=10000, orient=HORIZONTAL)
         self.analytics_check = Checkbutton(self.left_side_section, text="Run Additional Analytics", variable=self.run_additional_logs, onvalue=1,
                                           offvalue=0)
@@ -95,7 +95,6 @@ class Memory_Detector_App:
 
     def run_analyzer(self, event):
         print('Starting Detector...')
-        #TODO all these
         self.config.set_memory_leak_delay(self.memory_leak_delay.get()) #time delay
         Memory_Leak_Config.set_memory_leak_delay(self.memory_leak_delay.get())
         print("Time delay between snapshots is set to: " + str(self.config.get_memory_leak_delay()))
@@ -107,7 +106,6 @@ class Memory_Detector_App:
         self.config.set_trigger_threshold(self.trigger_threshold.get()) #trigger threshold
         Memory_Leak_Config.set_trigger_threshold(self.trigger_threshold.get())
         print("The threshold to alert user about memroy leak is set to: " + str(self.config.get_trigger_threshold()))
-
 
         self.config.set_additional_details(self.run_additional_logs.get()) #additional details
         Memory_Leak_Config.set_additional_details(self.run_additional_logs.get())
@@ -140,16 +138,11 @@ class Memory_Detector_App:
         #     #unique.run()
         #     i+=1
         # unique.run()
-        # time.sleep(2)
-        #plag.run()
-        start_memory_leak_10()
+        # plag.run()
+        start_memory_leak_1()
         # end_time = time.time()
         # print("Runtime:", end_time - start_time, "seconds")
         # time.sleep(10)
-        # start_memory_leak_2()
-        # start_memory_leak_3()
-        # start_memory_leak_4()
-        # start_memory_leak_5()
 
 class MyManager(BaseManager):
     pass
