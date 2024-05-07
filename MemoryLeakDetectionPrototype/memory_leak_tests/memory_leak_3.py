@@ -1,16 +1,13 @@
 import time
 
-class Node:
-    def __init__(self):
-        self.next = None
-
-node1 = Node()
-node2 = Node()
-node1.next = node2
-node2.next = node1  # circular reference
+def simulate_memory_leak():
+    data = []
+    while True:
+        data.extend([0] * 1000)
+        time.sleep(1)
 
 
 def start_memory_leak_3():
     print("Example code with a memory leak running...")
-    Node()
+    simulate_memory_leak()
 
