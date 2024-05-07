@@ -1,4 +1,5 @@
 import re
+## CODE WAS ORIGINALLY OBTAINED FROM https://github.com/Python-World/python-mini-projects
 
 # script to fetch unique sorted words from a text file.
 list_of_words = []

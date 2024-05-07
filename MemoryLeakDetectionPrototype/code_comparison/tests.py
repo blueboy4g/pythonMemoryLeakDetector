@@ -4,6 +4,8 @@ import tracemalloc
 import objgraph
 from memory_profiler import profile
 
+## THIS FILE IS USED ONLY TO TEST AND MONITOR PERFORMANCE METRICS
+
 # from MemoryLeakDetectionPrototype.code_comparison.plag import plag
 import plag.plag
 import unique.unique
@@ -20,14 +22,14 @@ loop=2000
 i=1
 while i <= loop:
     plag.plag.run()
-    #unique.unique.run()
+    #unique.unique.run() #set loop to 200 for unique
     i+=1
 
 # unique.unique.run()
 # time.sleep(2)
 
 # plag.plag.run()
-
+# time.sleep(5)
 
 # current_counts = objgraph.typestats()
 # print("Checking for leaks...")

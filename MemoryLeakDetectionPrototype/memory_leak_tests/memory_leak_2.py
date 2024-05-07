@@ -1,8 +1,5 @@
 import time
 
-
-# This code creates an infinite loop and appends items to a list, but the list keeps growing without ever being cleared.
-
 def memory_leak():
     my_list = []
     while True:

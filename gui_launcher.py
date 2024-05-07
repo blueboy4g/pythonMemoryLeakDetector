@@ -4,11 +4,12 @@ from multiprocessing.managers import BaseManager
 import tkinter as tk
 from tkinter import *
 from MemoryLeakDetectionPrototype.adapters.memory_leak_scanner import analyze
-from MemoryLeakDetectionPrototype.code_comparison.unique import unique
 from MemoryLeakDetectionPrototype.config.memory_leak_config import Memory_Leak_Config
-from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_1 import start_memory_leak_1
+
+#TESTING SCENARIOS
 from MemoryLeakDetectionPrototype.code_comparison.plag import plag
-from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_10 import start_memory_leak_10
+from MemoryLeakDetectionPrototype.code_comparison.unique import unique
+from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_1 import start_memory_leak_1
 from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_2 import start_memory_leak_2
 from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_3 import start_memory_leak_3
 from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_4 import start_memory_leak_4
@@ -17,7 +18,7 @@ from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_6 import start_m
 from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_7 import start_memory_leak_7
 from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_8 import start_memory_leak_8
 from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_9 import start_memory_leak_9
-
+from MemoryLeakDetectionPrototype.memory_leak_tests.memory_leak_10 import start_memory_leak_10
 
 class Memory_Detector_App:
 

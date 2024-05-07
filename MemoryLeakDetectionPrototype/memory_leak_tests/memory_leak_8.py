@@ -1,7 +1,5 @@
 import tkinter as tk
 
-# This code binds event handlers to GUI widgets but forgets to unbind them when the widgets are destroyed, leading to memory leaks.
-
 class GUI:
     def __init__(self):
         self.root = tk.Tk()
@@ -12,7 +10,6 @@ class GUI:
     def on_button_click(self, event):
         print("Button clicked")
 
-    # Without unbinding the event handler when the GUI is destroyed, references to the event handler can prevent objects from being garbage collected.
     def run(self):
         self.root.mainloop()
 

@@ -3,7 +3,7 @@ class Memory_Leak_Config:
 
     memory_leak_delay = None
     trigger_threshold = None
-    memory_threashold = None
+    memory_threshold = None
     additional_details = None
 
     @staticmethod

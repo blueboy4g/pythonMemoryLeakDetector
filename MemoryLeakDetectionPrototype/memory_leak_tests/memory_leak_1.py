@@ -21,9 +21,7 @@ def example_memory_leak():
     time.sleep(1)
     example_memory_leak()
 
-#@profile
 def start_memory_leak_1():
     print("Example code with a memory leak running...")
     example_memory_leak()
-    #time.sleep(10)
 

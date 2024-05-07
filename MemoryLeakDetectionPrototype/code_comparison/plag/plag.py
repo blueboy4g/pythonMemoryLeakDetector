@@ -1,18 +1,14 @@
-#pip install -U scikit-learn
-#Make sure all the .txt files that need to be checked are in the same directory as the script
-import os
 
-from guppy import hpy
-from memory_profiler import profile
-import time
+## CODE WAS ORIGINALLY OBTAINED FROM https://github.com/Python-World/python-mini-projects
+
+import os
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-# @profile
 def vectorize(Text): return TfidfVectorizer().fit_transform(Text).toarray()
-# @profile
+
 def similarity(doc1, doc2): return cosine_similarity([doc1, doc2])
 
 
@@ -24,7 +20,6 @@ vectors = vectorize(user_notes)
 s_vectors = list(zip(user_files, vectors))
 plagiarism_results = set()
 
-# @profile
 def check_plagiarism():
     global s_vectors
     for student_a, text_vector_a in s_vectors:
@@ -39,12 +34,7 @@ def check_plagiarism():
     return plagiarism_results
 
 def run():
-    # h=hpy()
-
     for data in check_plagiarism():
         print(data)
-
-    #time.sleep(5)
-    #print(h.heap())
 
 

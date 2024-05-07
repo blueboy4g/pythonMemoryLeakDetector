@@ -21,5 +21,3 @@ def analyze():
     objgraph_thread = threading.Thread(target=start_objgraph)
     tracemalloc_thread.start()
     objgraph_thread.start()
-
-#TODO could use Pympler or Heapy
